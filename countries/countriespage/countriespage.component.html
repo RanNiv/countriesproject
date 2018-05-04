@@ -1,0 +1,40 @@
+
+<div class="topnav">
+   
+    <input type="text" [(ngModel)]="countrysearch"   (keyup)="onKey($event)" placeholder="Search Country">
+  </div>
+
+
+<ul>
+
+
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>nativeName</th>
+      <th>Capital</th>
+      <th>population</th>
+      <th>flag</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of countriesdata">
+ <td>{{country.name}} </td>
+<td>{{country.nativeName}}</td>
+<td>{{country.capital}}</td>
+<td>{{country.population}}</td>
+
+<td><img [src]="country.flag"></td>
+
+     
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</ul>
